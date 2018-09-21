@@ -1,5 +1,3 @@
-# load 'player.rb'
-# load 'board.rb'
 require_relative 'player'
 require_relative 'board'
 
