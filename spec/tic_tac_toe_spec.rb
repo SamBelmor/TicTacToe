@@ -1,14 +1,13 @@
-require '../tic_tac_toe'
+require_relative '../tic_tac_toe'
 require 'pry'
 
 RSpec.describe TicTacToe do
-  let(:tic_tac_toe) {TicTacToe.new}
-  # it '#play' do
-  # end
+  let(:tic_tac_toe) { TicTacToe.new }
 
   it '#check_if_game_over' do
+    allow($stdin).to receive(:gets) { '1,1' }
+
     tic_tac_toe.check_if_game_over
-    binding.pry
     expect(tic_tac_toe.check_if_game_over).to eq(false)
   end
 

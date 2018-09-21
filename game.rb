@@ -1,0 +1,12 @@
+# frozen_string_literal:true
+
+require 'tic_tac_toe'
+
+class Game
+  def start_game
+    tic_tac_toe = TicTacToe.new
+    tic_tac_toe.play
+  end
+end
+
+Game.new.start_game
