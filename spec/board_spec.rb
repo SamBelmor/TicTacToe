@@ -15,50 +15,50 @@ RSpec.describe Board do
     expect(board.board[2][0]).to eq('x')
   end
   
-  it 'verify if a position on board is nil' do
+  it 'could_draw?' do
     board.could_draw?([0,0])
     expect(board.board[0][0]).to eq(nil)
   end
 
-  it 'return true if any method is executed' do
+  it '#winning_combination?' do
     board.winning_combination?('o')
     expect(board.winning_combination?('o')).to eq(false)
   end
 
-  it 'return if there is a vertical winner position' do
+  it '#winning_vertical?' do
     board.winning_vertical?('x')
     expect(board.winning_vertical?('x')).to eq(false)
   end
 
-  it 'return if there is a horizontal winner position' do
+  it '#winning_horizontal?' do
     board.winning_horizontal?('x')
     expect(board.winning_vertical?('x')).to eq(false)
   end
 
-  it 'return if there is a diagonal winner position' do
+  it '#winning_diagonal?' do
     board.winning_diagonal?('o')
     expect(board.winning_diagonal?('o')).to eq(false)
   end
 
-  it 'return an array with three vectors null values' do
+  it '#horizonals' do
     board.horizonals
     expected_array = [[nil, nil, nil],[nil, nil, nil],[nil, nil, nil]]
     expect(board.horizonals).to eq(expected_array)
   end
 
-  it 'return an array with three vectors with null values' do
+  it '#verticals' do
     board.verticals
     expected_array = [[nil, nil, nil], [nil, nil, nil], [nil, nil, nil]]
     expect(board.verticals).to eq(expected_array)
   end
 
-  it 'return an array with two vectors null values' do
+  it '#diagonals' do
     board.diagonals
     expected_array = [[nil, nil, nil], [nil, nil, nil]]
     expect(board.diagonals).to eq(expected_array)
   end
 
-  it 'full' do
+  it '#full' do
     board.full
     expect(board.full).to eq(false)
   end
