@@ -52,11 +52,6 @@ class TicTacToe
   end
 
   def switch_players
-    if @current_player == @player_one
-      @current_player = @player_two
-    else
-      @current_player = @player_one
-    end
+    @current_player = @current_player == @player_one ? @player_two : @player_one
   end
-
 end
