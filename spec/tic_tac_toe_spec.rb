@@ -1,5 +1,4 @@
 require_relative '../tic_tac_toe'
-require 'pry'
 
 RSpec.describe TicTacToe do
   let(:tic_tac_toe) { TicTacToe.new 
