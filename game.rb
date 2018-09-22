@@ -1,6 +1,6 @@
 # frozen_string_literal:true
 
-require 'tic_tac_toe'
+require_relative 'tic_tac_toe'
 
 class Game
   def start_game
