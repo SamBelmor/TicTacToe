@@ -7,9 +7,9 @@ class Player
   end
 
   def ask_for_coordinates
-    print "Enter your coornidates in form x,y: "
-    coordinates = gets.chomp.split(",")
-    filtered_coordinates = validate_coordinates_format(coordinates)
+    print "Enter your coordinates in form x,y: "
+    coordinates = $stdin.gets.chomp.split(",")
+    validate_coordinates_format(coordinates)
   end
 
   def validate_coordinates_format(coordinates)
@@ -22,8 +22,7 @@ class Player
     end
   end
 
-  def split_positions(coordinates)
-    position_x = coordinates.first.to_i
-    position_y = coordinates.last.to_i
+  def split_positions(coordinates = '')
+    coordinates.split(',').map(&:to_i)
   end
 end

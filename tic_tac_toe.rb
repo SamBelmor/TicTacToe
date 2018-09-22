@@ -2,8 +2,8 @@ require_relative 'player'
 require_relative 'board'
 
 class TicTacToe
-  attr_accessor :board, :current_player
-  
+  attr_accessor :board, :current_player, :player_one, :player_two
+
   def initialize
     @board = Board.new
     @player_one = Player.new("Player one", "X")
@@ -32,7 +32,7 @@ class TicTacToe
   def check_if_game_over
     check_victory || check_draw
   end
-  
+
   def check_victory
     if @board.winning_combination?(@current_player.piece)
       puts "#{@current_player.name} wins"
@@ -40,7 +40,7 @@ class TicTacToe
     else
       false
     end
-  end 
+  end
 
   def check_draw
     if @board.full
@@ -50,16 +50,8 @@ class TicTacToe
       false
     end
   end
-  
+
   def switch_players
-    if @current_player == @player_one
-      @current_player = @player_two
-    else
-      @current_player = @player_one
-    end
+    @current_player = @current_player == @player_one ? @player_two : @player_one
   end
-
 end
-
-tic_tac_toe = TicTacToe.new
-tic_tac_toe.play
