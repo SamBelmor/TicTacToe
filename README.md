@@ -18,12 +18,8 @@ Then load the gem into IRB with;
 
     > require 'game'
 
-You need to create a new instance
-
-    > new_game = Game.new
-
 And finally start the game making used of the instance:
 
-    > new_game.start_game
+    > Game.new.start_game
 
 Let the fun begin!
