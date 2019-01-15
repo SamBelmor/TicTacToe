@@ -12,4 +12,4 @@ Run the file game.rb in your console with the next command:
 
     $ ruby game.rb
 
-#Enjoy the game!!
+## Enjoy the game!!
