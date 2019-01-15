@@ -1,7 +1,7 @@
 require_relative '../tic_tac_toe'
 
 RSpec.describe TicTacToe do
-  let(:tic_tac_toe) { TicTacToe.new 
+  let(:tic_tac_toe) { TicTacToe.new }
 
   it '#check_if_game_over' do
     allow($stdin).to receive(:gets) { '1,1' }
